@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+#root {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 244, 230);
+    display: grid;
+    place-items: center;
+    > span {
+        user-select: none;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        > span {
+            color: red;
+            cursor: pointer;
+            
+        }
+        > span:hover {
+            color: rgb(211, 0, 0);
+        }
+    }
+
+    >#modal-start {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.808);
+        z-index: 2;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        >input {
+            margin: 10px;
+            padding: .7rem;
+        }
+
+        >button {
+            padding: .8rem 1rem;
+            background-color: rgb(94, 206, 118);
+            border: none;
+            cursor: pointer;
+            transition: .3s;
+            border-radius: .3em;
+        }
+
+        >button:hover {
+            opacity: .8;
+            scale: 110%;
+        }
+    }
+
+    >#modal-end {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-color: rgba(29, 31, 32, 0.452);
+        z-index: 2;
+        user-select: none;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        >span {
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+            font-size: 1.2rem;
+            background-color: rgb(239, 144, 11);
+            padding: .7rem 1rem;
+            border-radius: 20px;
+        }
+    }
+
+    >.mancala-board {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 900px;
+        height: 200px;
+        background-color: rgb(208, 186, 158);
+        border-radius: 20px;
+        box-shadow: 0px 18px 40px -19px rgba(117, 117, 117, 1);
+        padding: 30px;
+
+        >#b-store {
+            background-color: rgba(81, 255, 90, 0.237);
+        }
+
+        >#a-store {
+            background-color: rgba(85, 76, 255, 0.233);
+        }
+
+        >.store {
+            height: 180px;
+            width: 80px;
+            box-shadow: inset 0px 0px 25px -7px rgba(0, 0, 0, 0.51);
+            border-radius: 100px;
+            display: grid;
+            place-items: center;
+            user-select: none;
+
+            >span {
+                font-family: Arial, Helvetica, sans-serif;
+                color: aliceblue;
+                opacity: .7;
+                font-size: 16pt;
+            }
+        }
+
+        >.pockets {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            >.pocket-area {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                >.pocket {
+                    width: 80px;
+                    height: 80px;
+                    display: grid;
+                    place-items: center;
+                    background-color: rgb(204, 180, 149);
+                    box-shadow: inset 0px 0px 25px -7px rgba(0, 0, 0, 0.51);
+                    border-radius: 100px;
+
+                    >img {
+                        width: 70px;
+                        height: 70px;
+                        user-select: none;
+                    }
+                }
+            }
+
+            >.pocket-area {
+                >.pocket {
+                    cursor: pointer;
+                }
+
+                >.pocket:hover {
+                    background-color: rgb(225, 202, 172);
+
+                    >img {
+                        width: 75px;
+                        height: 75px;
+                    }
+                }
+            }
+        }
+    }
+}

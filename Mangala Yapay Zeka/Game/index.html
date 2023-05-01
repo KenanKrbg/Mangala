@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script
+        src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+        defer></script>
+    <title>Mangala</title>
+</head>
+
+<body oncontextmenu="return false;">
+    <div id="root">
+        <div id="modal-start">
+            <input autocomplete="on" id="p-1" type="text" placeholder="Player 1">
+            <input autocomplete="on" id="p-2" type="text" placeholder="Player 2">
+            <button onclick="start()">Start</button>
+        </div>
+        <div id="modal-end">
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_touohxv0.json" background="transparent" speed="1"
+                style="width: 300px; height: 300px;"
+            >
+            </lottie-player>
+            <span></span>
+        </div>
+        <div class="mancala-board">
+            <div style="rotate: 180deg" id="b-store" class="store">
+                <span>0</span>
+            </div>
+            <div class="pockets">
+                <div class="pocket-area">
+                    <div class="pocket" id="b-6">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                    <div class="pocket" id="b-5">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                    <div class="pocket" id="b-4">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                    <div class="pocket" id="b-3">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                    <div class="pocket" id="b-2">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                    <div class="pocket" id="b-1">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                </div>
+                <div class="pocket-area" data-user>
+                    <div class="pocket" id="a-1">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                    <div class="pocket" id="a-2">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                    <div class="pocket" id="a-3">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                    <div class="pocket" id="a-4">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                    <div class="pocket" id="a-5">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                    <div class="pocket" id="a-6">
+                        <img src="Rocks/rock-4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="a-store" class="store">
+                <span>0</span>
+            </div>
+        </div>
+        <span>Oyun donduysa <span onclick="available =  true">bu tuşa</span> basın</span>
+    <script src="app.js"></script>
+</body>
+
+</html>
